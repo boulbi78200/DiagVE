@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiagVE.Mobile - Diagnostic & Maintenance Électrique</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        ev: {
+                            500: '#06b6d4', // Cyan Électrique
+                            600: '#0891b2',
+                            amber: '#f59e0b' // Jaune Haute Tension
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-11 h-11 bg-cyan-500 rounded-2xl flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-cyan-500/20">
+                    ⚡
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">DiagVE<span class="text-cyan-400">.Mobile</span></span>
+                    <span class="text-[10px] text-amber-400 font-bold uppercase tracking-widest block mt-1">Diagnostic & Maintenance HT / VE</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <a href="#services" class="text-slate-300 hover:text-cyan-400 transition">Prestations</a>
+                <a href="#tarifs" class="text-slate-300 hover:text-cyan-400 transition">Grille Tarifaire</a>
+                <a href="#materiel" class="text-slate-300 hover:text-cyan-400 transition">Équipement Pro</a>
+                <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2.5 rounded-xl transition shadow-lg shadow-cyan-500/20">
+                    Demander un Diag
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-20 px-6 text-center border-b border-slate-800">
+        <div class="max-w-4xl mx-auto space-y-6 relative z-10">
+            <div class="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 text-xs px-4 py-2 rounded-full font-bold border border-cyan-500/20 uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Intervention Mobile Sur Place • Garages & Particuliers
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+                Expertise Diagnostic & <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-400">Réparations sur Rendez-vous</span>
+            </h1>
+            
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
+                Spécialiste du diagnostic électronique, santé batterie (SoH) et recherche de pannes Haute Tension. Sur demande après diagnostic, établissement d'un devis pour le remplacement de pièces et la petite maintenance.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-8 py-4 rounded-2xl shadow-xl shadow-cyan-500/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> Réserver une Intervention
+                </a>
+                <a href="#tarifs" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold px-8 py-4 rounded-2xl border border-slate-700 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-tags"></i> Voir les Tarifs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PRESTATIONS -->
+    <section id="services" class="max-w-7xl mx-auto px-6 py-20 space-y-12">
+        <div class="text-center space-y-3">
+            <h2 class="text-3xl sm:text-4xl font-black text-white">Nos Domaines d'Expertise</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Intervention directe à votre atelier, concession ou domicile sans besoin de remorquage.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Carte 1 -->
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 space-y-4 hover:border-cyan-500/50 transition">
+                <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-car-battery"></i>
+                </div>
+                <h3 class="text-lg font-extrabold text-white">Test Santé Batterie (SoH)</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Analyse globale de la batterie de traction : capacité réelle %, équilibrage des cellules et certificat de santé officiel pour vente/achat.
+                </p>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 space-y-4 hover:border-amber-500/50 transition">
+                <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <h3 class="text-lg font-extrabold text-white">Recherche de Panne HT</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Localisation des défauts d'isolement Haute Tension, contrôle des contacteurs, fusibles pyrotechniques et fuites de courant.
+                </p>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 space-y-4 hover:border-cyan-500/50 transition">
+                <div class="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-lg font-extrabold text-white">Diagnostic Calculateurs</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Lecture et effacement des défauts (DTC), remise à zéro des indicateurs et calibrage des modules électroniques.
+                </p>
+            </div>
+
+            <!-- Carte 4 : Devis & Réparation -->
+            <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800 space-y-4 hover:border-emerald-500/50 transition">
+                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+                <h3 class="text-lg font-extrabold text-white">Devis & Remplacement de Pièces</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    À la demande suite au diagnostic, établissement d'un devis précis et planification d'un rendez-vous pour le remplacement de pièces.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION TARIFS TRANSPARENTS -->
+    <section id="tarifs" class="bg-slate-900/60 py-20 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
+            <div class="text-center space-y-3">
+                <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Tarification Transparente</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Nos Forfaits d'Intervention</h2>
+                <p class="text-slate-400 text-sm">Transparence totale : devis validé avant toute intervention ou remplacement.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Forfait 1 -->
+                <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 space-y-6 relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-300">Forfait Diag Express OBD</h3>
+                        <div class="text-3xl font-black text-white">89 € <span class="text-xs text-slate-500 font-normal">TTC</span></div>
+                        <p class="text-xs text-slate-400">Lecture rapide et effacement des défauts calculateurs à bord.</p>
+                        <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Scan complet des calculateurs</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Effacement des voyants moteur/HT</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Envoi du rapport d'erreur PDF</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-slate-800 hover:bg-slate-700 text-white text-center font-bold py-3 rounded-xl text-xs transition">Réserver</a>
+                </div>
+
+                <!-- Forfait 2 (Mise en avant) -->
+                <div class="bg-slate-950 p-8 rounded-3xl border-2 border-cyan-500 space-y-6 relative flex flex-col justify-between shadow-2xl shadow-cyan-500/10">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cyan-500 text-slate-950 text-[10px] font-black uppercase px-3 py-1 rounded-full">Recommandé Pro & Particuliers</span>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-cyan-400">Bilan Santé Batterie (SoH)</h3>
+                        <div class="text-3xl font-black text-white">149 € <span class="text-xs text-slate-500 font-normal">TTC</span></div>
+                        <p class="text-xs text-slate-400">Contrôle officiel de capacité batterie avant achat/vente de VE.</p>
+                        <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Analyse Santé Batterie (SoH %)</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Tension & Équilibrage des cellules</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> **Certificat Officiel Autel imprimé**</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Déplacements inclus</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-center font-black py-3 rounded-xl text-xs transition">Réserver ce Forfait</a>
+                </div>
+
+                <!-- Forfait 3 -->
+                <div class="bg-slate-950 p-8 rounded-3xl border border-slate-800 space-y-6 relative flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-amber-400">Expertise Panne HT + Devis Réparation</h3>
+                        <div class="text-3xl font-black text-white">220 € <span class="text-xs text-slate-500 font-normal">TTC</span></div>
+                        <p class="text-xs text-slate-400">Recherche approfondie de panne complexe et proposition de devis sur RDV.</p>
+                        <ul class="text-xs text-slate-300 space-y-2 pt-2">
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Mesure d'isolement Haute Tension</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Consignation sécurisée NF C 18-550</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> **Établissement d'un devis pièce & main d'œuvre**</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-2"></i> Planification du remplacement sur RDV</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-slate-800 hover:bg-slate-700 text-white text-center font-bold py-3 rounded-xl text-xs transition">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ÉQUIPEMENT PRO & SÉCURITÉ -->
+    <section id="materiel" class="max-w-7xl mx-auto px-6 py-20 space-y-12">
+        <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border border-slate-800 p-8 sm:p-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="space-y-4 max-w-xl">
+                <span class="bg-amber-500/10 text-amber-400 text-xs px-3 py-1 rounded-full font-bold border border-amber-500/20 uppercase tracking-widest">
+                    Matériel de Pointe
+                </span>
+                <h3 class="text-2xl sm:text-3xl font-black text-white">Valise Autel MaxiSys EV & Outillage Certifié</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Nous intervenons exclusivement avec les stations de diagnostic **Autel MS909/MS919 EV** et le kit EVDiag dédié au décodage direct des batteries Haute Tension. Nos mesures de sécurité respectent strictement la norme **NF C 18-550** (EPI Classe 0, VAT certifié, Mégohmmètre HT).
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+                    <i class="fa-solid fa-shield-halved text-2xl text-amber-400 mb-2"></i>
+                    <p class="text-xs font-bold text-white">NF C 18-550</p>
+                    <p class="text-[10px] text-slate-500">Habilitation HT Validée</p>
+                </div>
+                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800">
+                    <i class="fa-solid fa-microchip text-2xl text-cyan-400 mb-2"></i>
+                    <p class="text-xs font-bold text-white">Autel EVDiag</p>
+                    <p class="text-[10px] text-slate-500">Rapport PDF Instantané</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT & RÉSERVATION (WHATSAPP) -->
+    <section id="contact" class="max-w-3xl mx-auto px-6 pb-20">
+        <div class="bg-slate-900 border border-slate-800 p-8 sm:p-12 rounded-3xl shadow-2xl space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-black text-white">Demande de Diagnostic / Devis Pièce</h2>
+                <p class="text-slate-400 text-xs">Remplissez ce formulaire pour ouvrir directement une discussion WhatsApp sur mon téléphone pro.</p>
+            </div>
+
+            <form onsubmit="envoyerDemande(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Nom / Société</label>
+                        <input type="text" id="nom" required placeholder="Ex: Jean Dupont ou Garage Pro" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Téléphone</label>
+                        <input type="tel" id="tel" required placeholder="Ex: 06 12 34 56 78" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-cyan-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Modèle du Véhicule</label>
+                        <input type="text" id="modele" required placeholder="Ex: Renault Zoé, Tesla Model 3..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Immatriculation</label>
+                        <input type="text" id="immat" placeholder="Ex: AB-123-CD" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white uppercase font-mono text-xs focus:outline-none focus:border-cyan-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Service Souhaité</label>
+                    <select id="prestation" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-cyan-500">
+                        <option value="SoH">Test Santé Batterie SoH (149 €)</option>
+                        <option value="Express">Diag Express Effacement Voyants (89 €)</option>
+                        <option value="PanneHT">Recherche de Panne HT + Devis Réparation sur RDV (220 €)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Symptômes ou pièce à chiffrer</label>
+                    <textarea id="message" rows="3" placeholder="Ex: Le véhicule ne charge plus / Devis souhaité pour remplacement de contacteur..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-cyan-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 rounded-xl shadow-xl shadow-emerald-500/20 transition cursor-pointer flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Envoyer ma Demande via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-xs text-slate-600">
+        <p>&copy; 2026 DiagVE.Mobile — Service Mobile de Diagnostic & Réparation Véhicules Électriques. Mantes-la-Jolie & Île-de-France.</p>
+    </footer>
+
+    <script>
+        function envoyerDemande(e) {
+            e.preventDefault();
+
+            // Mettez votre numéro WhatsApp au format international (ex: 33612345678)
+            const monNumeroWhatsApp = "0641897106"; 
+
+            const nom = document.getElementById('nom').value;
+            const tel = document.getElementById('tel').value;
+            const modele = document.getElementById('modele').value;
+            const immat = document.getElementById('immat').value || 'Non renseignée';
+            const prestation = document.getElementById('prestation').options[document.getElementById('prestation').selectedIndex].text;
+            const message = document.getElementById('message').value || 'Aucun détail supplémentaire';
+
+            const texteMessage = `⚡ *NOUVELLE DEMANDE DIAGVE.MOBILE* ⚡\n\n` +
+                `👤 *Client / Garage :* ${nom}\n` +
+                `📞 *Téléphone :* ${tel}\n` +
+                `🚗 *Véhicule :* ${modele} (${immat})\n` +
+                `📋 *Prestation :* ${prestation}\n` +
+                `💬 *Symptômes / Devis demandé :* ${message}`;
+
+            const urlWhatsApp = `https://wa.me/${monNumeroWhatsApp}?text=${encodeURIComponent(texteMessage)}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
